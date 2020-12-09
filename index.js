@@ -8,20 +8,14 @@ app.engine("html", es6Renderer);
 app.set("views", "templates");
 app.set("view engine", "html");
 
-const projects = [
-  "python_project",
-  "front_end",
-  "back_end",
-  "react",
-  "capstone",
-];
+const names = ["python_project", "front_end", "back_end", "react", "capstone"];
 
 app.get("/", (req, res) => {
   res.render("home");
 });
 
 app.get("/projects", (req, res) => {
-  const names = projects;
+  //   const names = projects;
   res.render("projects", {
     locals: {
       names,
